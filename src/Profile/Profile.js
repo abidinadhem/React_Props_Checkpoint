@@ -5,10 +5,10 @@ const Profile =({fullName,bio,profession,children,handleName})=>{
 <div style={{textAlign:'center',border:'2px solid red', padding:'140px'}}>
     
     {children}
-    <h1 style={{color:'yellowgreen'}}>{fullName}</h1>
+    <h1 style={{color:'yellow'}}>{fullName}</h1>
     <h2 style={{color:'greenyellow'}}>{profession}</h2>
-    <p style={{color:'grey',fontFamily:'fantasy'}}>{bio}</p>
-    <button onClick={() => handleName(fullName)}>PUSH ME!</button>
+    <p style={{color:'yellowgreen',fontFamily:'fantasy'}}>{bio}</p>
+    <button style={{backgroundColor:"yellowgreen"}} onClick={() => handleName(fullName)}>PUSH ME!</button>
 </div>
     );
 };
@@ -23,9 +23,9 @@ Profile.defaultProps={
     fullName:'No name available',
     bio:'No bio available',
     profession:'No profession available',
-    children:<img src="" alt="" style={{}}/>,
-    handleName:(name)=>alert('hello, my name is ${name}')
-
+    children:<img src="" alt="no image available" style={{}}/>,
+    handleName:(error)=>alert('error')
+    
 };
 
 export default Profile;
